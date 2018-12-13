@@ -9,10 +9,7 @@
         <a class="nav-link" routerLink="user">User Board</a>
       </li>
       <li *ngIf="authority === 'admin'" class="nav-item">
-        <a class="nav-link" routerLink="admin">Admin Board</a>
-      </li>
-      <li *ngIf="authority === 'pm'" class="nav-item">
-        <a class="nav-link" routerLink="pm">PM Board</a>
+        <a class="nav-link" routerLink="admin">Admin View</a>
       </li>
       <li *ngIf="!authority" class="nav-item">
         <a class="nav-link" routerLink="auth/login">Login</a>
