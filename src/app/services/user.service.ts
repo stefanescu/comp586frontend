@@ -21,7 +21,7 @@ export class UserService {
     return this.http.get(this.pmUrl, { responseType: 'text' });
   }
 
-  getAdminBoard(): Observable<string> {
-    return this.http.get(this.adminUrl, { responseType: 'text' });
+  getAdminBoard(): Observable<Object> {
+    return this.http.get(this.adminUrl, { responseType: 'json' });
   }
 }

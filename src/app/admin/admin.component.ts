@@ -7,7 +7,7 @@ import { UserService } from '../services/user.service';
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent implements OnInit {
-  board: string;
+  users: Object;
   errorMessage: string;
 
   constructor(private userService: UserService) { }
@@ -15,7 +15,8 @@ export class AdminComponent implements OnInit {
   ngOnInit() {
     this.userService.getAdminBoard().subscribe(
       data => {
-        this.board = data;
+        console.log(data);
+        this.users = data['userList'];
       },
       error => {
         this.errorMessage = `${error.status}: ${JSON.parse(error.error).message}`;
